@@ -29,22 +29,34 @@ public class Lottery {
         }
         return correctGuesses;
     }
-    public static void display(){
+    public static void display(int[] lotteryNum,int[] userNum, int correctGuesses){
         System.out.println("The random lottery numbers are...");
         for(int i=0;i<lotteryNum.length;i++){
             System.out.print(lotteryNum[i]+"    ");
         }
         System.out.println();
         System.out.println("Your gueses are as follows...");
+        for(int i=0; i<userNum.length;i++){
+            System.out.print(userNum[i]+"   ");
+        }
+        System.out.println();
+        System.out.println("You got " + correctGuesses + " guess(es) correct.");
+        if(correctGuesses==lotteryNum.length){
+            System.out.println("Congradulations! You win!");
+        }else{
+            System.out.println("YOU LOSE");
+        }
+    }
+    public static void runSim(){
+        randomLottery(lotteryNum);
+                for(int i=0;i<lotteryNum.length;i++){
+            System.out.print(lotteryNum[i]+"    ");
+        }
+        getUser(userNum);
+        int correctGuesses=compare(lotteryNum, userNum);
+        display(lotteryNum, userNum, correctGuesses);
     }
     public static void main(String[] args) {
-        randomLottery(lotteryNum);
-        int count=0;
-        for(int i=0;i<lotteryNum.length;i++){
-            System.out.println(lotteryNum[i]);
-            count++;
-        }
-        System.out.println(count);
-        getUser(userNum);
+        runSim();
     }
 }
