@@ -49,9 +49,11 @@ public class Lottery {
     }
     public static void runSim(){
         randomLottery(lotteryNum);
-                for(int i=0;i<lotteryNum.length;i++){
+        for(int i=0;i<lotteryNum.length;i++){
             System.out.print(lotteryNum[i]+"    ");
         }
+        System.out.println("This is only to show the lottery to be able to prove when all guesses are correct the user winss");
+        System.out.println();
         getUser(userNum);
         int correctGuesses=compare(lotteryNum, userNum);
         display(lotteryNum, userNum, correctGuesses);

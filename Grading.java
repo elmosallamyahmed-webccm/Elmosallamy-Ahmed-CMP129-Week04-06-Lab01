@@ -5,8 +5,7 @@ public class Grading {
     private static String[] incorrectQuestions = new String[20];
     private static int rightAnswers = 0;
     private static int wrongAnswers = 0;
-    public static void getCurrentTestGrade()
-    {
+    public static void getCurrentTestGrade(){
         Scanner input = new Scanner(System.in);
         for(int i = 0; i < studentAnswers.length; i++)
         {
@@ -60,7 +59,7 @@ public class Grading {
             System.out.println();      
         }
     }
-    public static void gradeTest()
+    public static void gradeTest() 
     {
         getCurrentTestGrade();
         compareTestGrade();
